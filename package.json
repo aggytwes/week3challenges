@@ -1,0 +1,14 @@
+{
+  "name": "array-sort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arraysort.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "aggy",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
