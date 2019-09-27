@@ -1,54 +1,75 @@
-function arraySort(anArray) {
+//function arraySort(anArray) {
     // Your code here
 
-    // var listInput = window.prompt(' Enter list in format [1,2,"w"] , \n Note:Strings should be in double quotes not single quotes');
-        var listInput = [4, 9, 2, 3, 5, 1, 'd', 'a', 'c', 'f']     
-    //try{
-        if(listInput.length !== 0 && typeof(JSON.parse(listInput)) === "object"){
-        var run = arraySort(JSON.parse(listInput));
+    // var anArray = window.prompt(' Enter anArray in format [1,2,"w"] , \n Note:Strings should be in double quotes not single quotes');
+      // var anArray = [4, 9, 2, 3, 5, 1, 'd', 'a', 'c', 'f']   
+      
+      
+
+
+     /* 
+    try{
+        if(anArray.length !== 0 && typeof(JSON.parse(anArray)) === "object"){
+        var run = arraySort(JSON.parse(anArray));
         return(JSON.stringify(run));
         }else{
+            console.log('yeah')
             return("Field is empty");
         }
         
-   // }catch{
-   else if( listInput = ('string')){
+   }
+   catch {
+       console.log(anArray)
+    if( anArray = ('string')){
+        console.log('Yeah')
         return("invalid input");
    }
 
-         {
-            else return (listInput);
-        }
-    }
+         
+            else return (anArray);
+        
+    }*/
     
     ////////////////////////////////////////////////////////////////////
-    function arraySort(list){
-        var charList = Array();
-        var oddList = Array();
-        var evenList = Array();
+    function arraySort(anArray){
+        var charanArray = Array();
+        var oddanArray = Array();
+        var evenanArray = Array();
         var returnObject = Object();
-        for(var i = 0; i < list.length; i++){
-            var value = list[i];
-            if(typeof(value) === "string"){
-                charList.push(value)
-            }else if(typeof(value) === "number"){
-                if(i % 2 === 0){
-                    evenList.push(value);
+        var anArray = [4, 9, 2, 3, 5, 1, 'd', 'a', 'c', 'f'] 
+        
+        if(typeof(anArray) == 'string' ||  typeof(anArray) == 'number'){
+           console.log('Yeah')
+            return("invalid input");}
+
+        for(var i = 0; i < anArray.length; i++){
+            var value = anArray[i];
+
+           if(typeof(value) === "string") {
+            console.log[i]    
+            charanArray.push(value)
+            }
+            else if(typeof(value) === "number"){
+                if(anArray[i] % 2 === 0){
+                    console.log[i]
+                    evenanArray.push(value);
                 }else{
-                    oddList.push(value);
+                    console.log[i]
+                    oddanArray.push(value);
                 }
             }
             
             
         }
-        returnObject.evens = evenList;
-        returnObject.odds = oddList;
-        returnObject.chars = charList;
+        returnObject.evens = evenanArray.sort();
+        returnObject.odds = oddanArray.sort();
+        returnObject.chars = charanArray.sort();
+        console.log(returnObject);
+        return returnObject;
 
-        return {"chars": ["a", "c", "d", "f"], "evens": [2, 4], "odds": [1, 3, 5, 9]}
         
     }
-}
 
+    arraySort([4, 9, 2, 3, 5, 1, 'd', 'a', 'c', 'f']);
 
 module.exports = arraySort;
